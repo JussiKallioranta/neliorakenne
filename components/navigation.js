@@ -11,7 +11,15 @@ const routes = [
     {
         path: '/palvelut',
         name: 'Palvelut'
-    }
+    },
+    {
+        path: '/',
+        name: 'Etusivu'
+    },
+    {
+        path: '/palvelut',
+        name: 'Palvelut'
+    },
 ];
 
 const navWrap = {
@@ -21,26 +29,25 @@ const navWrap = {
         laptop: 'row'
     },
     justifyContent: 'center',
-    p: 2,
+    pb: 2,
 };
 
 const navButton = {
-    p: 0,
+    p: 1,
     m: 0,
-    borderRight: '1px solid #000',
     '&:last-child': {
         border: 'none'
     },
     '& h3': {
+        color: 'primary.main',
         mx: 2,
-        my: 0
+        my: 0,
+        fontWeight: 300
     },
     '&:hover': {
-        color: 'primary.main'
+        color: 'primary.main',
+        backgroundColor: '#121212'
     },
-    '&:active': {
-        color: 'primary.main'
-    }
 }
 
 const Navigation = () => {
@@ -49,11 +56,13 @@ const Navigation = () => {
         <Box sx={navWrap}>
             {
                 routes.map((route, i) =>
-                <Box key={`route_${i}`} sx={navButton}>
-                    <Link href={route.path}>
-                        <a onClick={() => setMobileNavOpen(false)}><h3>{route.name}</h3></a>
+                    <Link key={`route_${i}`} href={route.path}>
+                            <a onClick={() => setMobileNavOpen(false)}>
+                                <Box sx={navButton}>
+                                    <h3>{route.name}</h3>
+                                </Box>
+                            </a>
                     </Link>
-                </Box>
                 )
             }     
         </Box>

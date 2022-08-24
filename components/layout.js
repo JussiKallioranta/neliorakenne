@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import { AppBar, Box, Collapse, Container, Drawer, IconButton, SvgIcon, Toolbar } from '@mui/material'
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import Logo from '../public/logo_svg.svg'
+import Logo2 from '../public/neliorakenne_teksti_kulta.png'
 import Image from 'next/image';
 import { Icon } from '@mui/material';
 import { red } from '@mui/material/colors';
@@ -23,17 +24,19 @@ const header = {
     gridTemplateColumns: '3rem auto 3rem',
     alignItems: 'center',
     '& h1': {
-        margin: 0
+        margin: 0,
+        fontWeight: 300,
+        fontStyle: 'italic'
     },
 }
 
 const footer = {
     width: '100%',
-    backgroundColor: 'primary.main',
+    backgroundColor: 'secondary.main',
     p: 2,
     display: 'flex',
     '& h1': {
-        margin: 0
+        m: 0,
     }
 }
 
@@ -70,7 +73,7 @@ export default function Layout({ children }) {
                     </a>
                     </Link>
                     <Box sx={{ textAlign: 'center', '& h1': { margin: 0 } }}>
-                        <h1>Neliörakenne</h1>
+                        <h1>Slogan tähän</h1>
                     </Box>
                     <IconButton sx={menuButton} onClick={() => setMobileNavOpen(!mobileNavOpen)}>
                         <MenuRoundedIcon sx={{ color: 'primary.main', width: '3rem', height: '3rem' }}/>
@@ -92,7 +95,10 @@ export default function Layout({ children }) {
              {children}
              </Box>
             <Box sx={footer}>
-                <h1>Footer</h1>
+                <Container maxWidth='xl'>
+                    <Image src={Logo2} alt='logo'/>
+                    <h1>Footer</h1>
+                </Container>
             </Box>
         </div>
     )

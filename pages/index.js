@@ -1,7 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Box, Button, Container } from '@mui/material'
-import Testikuva from '../public/testikuva.png'
+import Testikuva from '../public/testikuva2.png'
+import kuva1 from '../public/kuva1.png'
+import kuva2 from '../public/kuva2.png'
+import kuva3 from '../public/kuva3.png'
 
 const gridWrap = {
   display: 'grid',
@@ -25,12 +28,7 @@ const contentBox = {
     laptop: 2,
   },
   borderBottom: '1px solid #FFC20E',
-  '&:first-child': {
-    ml: 0
-  },
-  '&:last-child': {
-    mr: 0
-  }
+
 }
 
 const mainImageWrap = {
@@ -64,14 +62,14 @@ export default function Home() {
           <Image src={Testikuva} alt='testikuva' layout='responsive'/>
         </Box>
         <Box sx={mobileImageWrap}>
-          <Image src={Testikuva} alt='testikuva' layout='fill' objectFit='cover'/>
+          <Image src={Testikuva} alt='testikuva' layout='fill' objectFit='cover' objectPosition='right'/>
         </Box>
           <Container maxWidth='xl'>
             <h1>Etusivu</h1>
             <Box sx={gridWrap}>
               <Box sx={contentBox}>
                 <h2>Lorem ipsum</h2>
-                <Image  src={Testikuva} alt='testikuva' layout='responsive'/>
+                <Image  src={kuva1} alt='testikuva' layout='responsive'/>
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem. Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu. Sed arcu lectus auctor vitae, consectetuer et venenatis eget velit. Sed augue orci, lacinia eu tincidunt et eleifend nec lacus. Donec ultricies nisl ut felis, suspendisse potenti. Lorem ipsum ligula ut hendrerit mollis, ipsum erat vehicula risus, eu suscipit sem libero nec erat. Aliquam erat volutpat. Sed congue augue vitae neque. Nulla consectetuer porttitor pede. Fusce purus morbi tortor magna condimentum vel, placerat id blandit sit amet tortor.
                   Mauris sed libero. Suspendisse facilisis nulla in lacinia laoreet, lorem velit accumsan velit vel matt
                 </p>
@@ -79,7 +77,7 @@ export default function Home() {
               </Box>
               <Box sx={contentBox}>
                 <h2>Dolor sit amet</h2>
-                <Image  src={Testikuva} alt='testikuva' layout='responsive'/>
+                <Image  src={kuva2} alt='testikuva' layout='responsive'/>
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem. Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu. Sed arcu lectus auctor vitae, consectetuer et venenatis eget velit. Sed augue orci, lacinia eu tincidunt et eleifend nec lacus. Donec ultricies nisl ut felis, suspendisse potenti. Lorem ipsum ligula ut hendrerit mollis, ipsum erat vehicula risus, eu suscipit sem libero nec erat. Aliquam erat volutpat. Sed congue augue vitae neque. Nulla consectetuer porttitor pede. Fusce purus morbi tortor magna condimentum vel, placerat id blandit sit amet tortor.
                   Mauris sed libero. Suspendisse facilisis nulla in lacinia laoreet, lorem velit accumsan velit vel mattis libero nisl et sem. Proin interdum maecenas massa turpis sagittis in, interdum non lobortis vitae massa. Quisque purus lectus, posuere eget imperdiet nec sodales id arcu. Vestibulum elit pede dictum eu, viverra non tincidunt eu ligula..
                 </p>
@@ -87,29 +85,7 @@ export default function Home() {
               </Box>
               <Box sx={contentBox}>
                 <h2>Consectetuer adipiscing</h2>
-                <Image  src={Testikuva} alt='testikuva' layout='responsive'/>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem. Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu. Sed arcu lectus auctor vitae, consectetuer et venenatis eget velit. Sed augue orci, lacinia eu tincidunt et eleifend nec lacus. Donec ultricies nisl ut felis, suspendisse potenti. Lorem ipsum ligula ut hendrerit mollis, ipsum erat vehicula risus, eu suscipit sem libero nec erat. Aliquam erat volutpat. Sed congue augue vitae neque. Nulla consectetuer porttitor pede. Fusce purus morbi tortor magna condimentum vel, placerat id blandit sit amet tortor.
-                </p>
-              </Box>
-            </Box>
-            <Box sx={gridWrap}>
-              <Box sx={contentBox}>
-                <h2>Lorem ipsum</h2>
-                <Image  src={Testikuva} alt='testikuva' layout='responsive'/>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem. Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu. Sed arcu lectus auctor vitae, consectetuer et venenatis eget velit. Sed augue orci, lacinia eu tincidunt et eleifend nec lacus. Donec ultricies nisl ut felis, suspendisse potenti. Lorem ipsum ligula ut hendrerit mollis, ipsum erat vehicula risus, eu suscipit sem libero nec erat. Aliquam erat volutpat. Sed congue augue vitae neque. Nulla consectetuer porttitor pede. Fusce purus morbi tortor magna condimentum vel, placerat id blandit sit amet tortor.
-                  Mauris sed libero. Suspendisse facilisis nulla in lacinia laoreet, lorem velit accumsan velit vel matt
-                </p>
-              </Box>
-              <Box sx={contentBox}>
-                <h2>Dolor sit amet</h2>
-                <Image  src={Testikuva} alt='testikuva' layout='responsive'/>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem. Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu. Sed arcu lectus auctor vitae, consectetuer et venenatis eget velit. Sed augue orci, lacinia eu tincidunt et eleifend nec lacus. Donec ultricies nisl ut felis, suspendisse potenti. Lorem ipsum ligula ut hendrerit mollis, ipsum erat vehicula risus, eu suscipit sem libero nec erat. Aliquam erat volutpat. Sed congue augue vitae neque. Nulla consectetuer porttitor pede. Fusce purus morbi tortor magna condimentum vel, placerat id blandit sit amet tortor.
-                  Mauris sed libero. Suspendisse facilisis nulla in lacinia laoreet, lorem velit accumsan velit vel mattis libero nisl et sem. Proin interdum maecenas massa turpis sagittis in, interdum non lobortis vitae massa. Quisque purus lectus, posuere eget imperdiet nec sodales id arcu. Vestibulum elit pede dictum eu, viverra non tincidunt eu ligula..
-                </p>
-              </Box>
-              <Box sx={contentBox}>
-                <h2>Consectetuer adipiscing</h2>
-                <Image  src={Testikuva} alt='testikuva' layout='responsive'/>
+                <Image  src={kuva3} alt='testikuva' layout='responsive'/>
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem. Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu. Sed arcu lectus auctor vitae, consectetuer et venenatis eget velit. Sed augue orci, lacinia eu tincidunt et eleifend nec lacus. Donec ultricies nisl ut felis, suspendisse potenti. Lorem ipsum ligula ut hendrerit mollis, ipsum erat vehicula risus, eu suscipit sem libero nec erat. Aliquam erat volutpat. Sed congue augue vitae neque. Nulla consectetuer porttitor pede. Fusce purus morbi tortor magna condimentum vel, placerat id blandit sit amet tortor.
                 </p>
               </Box>
