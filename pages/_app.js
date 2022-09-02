@@ -34,7 +34,6 @@ function MyApp({ Component, pageProps }) {
         <meta name="keywords" content="rakennuspalvelut" />
       </Head>
       <ThemeProvider theme={theme} >
-        <CssBaseline/>
         <NavigationContextProvider>
           <Layout>
             <Component {...pageProps} />
