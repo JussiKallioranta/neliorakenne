@@ -5,6 +5,7 @@ import Testikuva from '../public/testikuva2.png'
 import kuva1 from '../public/kuva1.png'
 import kuva2 from '../public/kuva2.png'
 import kuva3 from '../public/kuva3.png'
+import Link from 'next/link'
 
 const grid2Columns = {
   display: 'grid',
@@ -98,7 +99,11 @@ export default function Home() {
               <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem. Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu. Sed arcu lectus auctor vitae, consectetuer et venenatis eget velit. Sed augue orci, lacinia eu tincidunt et eleifend nec lacus. Donec ultricies nisl ut felis, suspendisse potenti. Lorem ipsum ligula ut hendrerit mollis, ipsum erat vehicula risus, eu suscipit sem libero nec erat. Aliquam erat volutpat. Sed congue augue vitae neque. Nulla consectetuer porttitor pede. Fusce purus morbi tortor magna condimentum vel, placerat id blandit sit amet tortor.
                 Mauris sed libero. Suspendisse facilisis nulla in lacinia laoreet, lorem velit accumsan velit vel mattis libero nisl et sem. Proin interdum maecenas massa turpis sagittis in, interdum non lobortis vitae massa. Quisque purus lectus, posuere eget imperdiet nec sodales id arcu. Vestibulum elit pede dictum eu, viverra non tincidunt eu ligula..
               </p>
-              <Button sx={{ mt: 'auto', ml: 'auto', width: '40%' }} variant="contained">Lue lisää</Button>
+              <Link href="/palvelut/#section2">
+                <a>
+                  <Button sx={{ mt: 'auto', ml: 'auto', width: '40%' }} variant="contained">Lue lisää</Button>
+                </a>
+              </Link>
             </Box>
             <Box sx={contentBox}>
               <h2>Consectetuer adipiscing</h2>

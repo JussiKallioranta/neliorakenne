@@ -60,7 +60,7 @@ const Header = () => {
               </Box>
             </a>
           </Link>
-          <Box sx={{ textAlign: 'center', '& h1': { margin: 0 } }}>
+          <Box sx={{ textAlign: 'center', '& h1': { color: '#fff' } }}>
             <h1>Slogan tähän</h1>
           </Box>
           <IconButton sx={menuButton} onClick={() => setMobileNavOpen(!mobileNavOpen)}>
@@ -72,7 +72,6 @@ const Header = () => {
         </Box>
       </Box>
       <Box sx={{ height: { mobile: '80px', laptop: '140px' } }}/>
-      
       <Box>
         <Drawer open={mobileNavOpen} onClose={() => setMobileNavOpen(false)} anchor='top' PaperProps = {{ sx: { backgroundColor: 'secondary.main' } }} >
           <Box sx={{ height: '5rem' }}></Box>
