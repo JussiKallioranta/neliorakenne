@@ -13,6 +13,8 @@ const theme = createTheme({
     secondary: {
       main: '#191919',
     },
+    white: '#fffefe',
+    black: '#191919'
   },
   breakpoints: {
     values: {
