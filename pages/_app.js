@@ -13,6 +13,8 @@ const theme = createTheme({
     secondary: {
       main: '#191919',
     },
+    white: '#fffefe',
+    black: '#191919'
   },
   breakpoints: {
     values: {
@@ -34,6 +36,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="keywords" content="rakennuspalvelut" />
       </Head>
       <ThemeProvider theme={theme} >
+        <CssBaseline/>
         <NavigationContextProvider>
           <Layout>
             <Component {...pageProps} />

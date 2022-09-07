@@ -6,6 +6,7 @@ import kuva1 from '../public/kuva1.png'
 import kuva2 from '../public/kuva2.png'
 import kuva3 from '../public/kuva3.png'
 import Link from 'next/link'
+import { grey } from '@mui/material/colors'
 
 const grid2Columns = {
   display: 'grid',
@@ -14,7 +15,7 @@ const grid2Columns = {
     laptop: '1fr 1fr',
     mobile: '1fr'
   },
-  mb: 2
+  my: 4
 }
 
 const grid3Columns = {
@@ -24,7 +25,7 @@ const grid3Columns = {
     laptop: '1fr 1fr 1fr',
     mobile: '1fr'
   },
-  mb: 2
+  my: 4,
 }
 
 const contentBox = {
@@ -33,24 +34,40 @@ const contentBox = {
   color: '#000',
   '& h2': {
     color: 'primary.main',
-    mb: 1
+    mb: 1,
   },
-  py: 2,
-  borderBottom: '1px solid #FFC20E',
+  backgroundColor: 'black'
+  //boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'
+}
 
+const textBox = {
+  p: 2,
+  color: 'white'
+}
+
+const headerTextBox = {
+  p: 2,
+  display: 'flex',
+  textAlign: 'center',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  '& h2': {
+    color: 'primary.main',
+    my: 2,
+  },
 }
 
 const mainImageWrap = {
   display: {
     mobile: 'none',
-    laptop: 'block'
+    tablet: 'block'
   },
 }
 
 const mobileImageWrap = {
   display: {
     mobile: 'block',
-    laptop: 'none'
+    tablet: 'none'
   },
   position: 'relative',
   width: '100%',
@@ -74,42 +91,50 @@ export default function Home() {
           <Image src={Testikuva} alt='testikuva' layout='fill' objectFit='cover' objectPosition='right'/>
         </Box>
         <Container maxWidth='xl'>
-          <h1>Etusivu</h1>
           <Box sx={grid2Columns}>
-            <Image  src={kuva1} alt='testikuva' layout='responsive'/>
-            <Box>
+            <div><Image  src={kuva1} alt='testikuva'  layout='responsive' width={300} height={200} unoptimized={true}/></div>
+            <Box sx={headerTextBox}>
               <h2>Lorem ipsum</h2>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem. Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu. Sed arcu lectus auctor vitae, consectetuer et venenatis eget velit. Sed augue orci, lacinia eu tincidunt et eleifend nec lacus. Donec ultricies nisl ut felis, suspendisse potenti. Lorem ipsum ligula ut hendrerit mollis, ipsum erat vehicula risus, eu suscipit sem libero nec erat. Aliquam erat volutpat. Sed congue augue vitae neque. Nulla consectetuer porttitor pede. Fusce purus morbi tortor magna condimentum vel, placerat id blandit sit amet tortor.
-                Mauris sed libero. Suspendisse facilisis nulla in lacinia laoreet, lorem velit accumsan velit vel matt
-              </p>
+              <h3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem. Quisque ligula eros ullamcorper quis. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+              </h3>
             </Box>
           </Box>
           <Box sx={grid3Columns}>
             <Box sx={contentBox}>
-              <h2>Lorem ipsum</h2>
-              <Image  src={kuva1} alt='testikuva' layout='responsive'/>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem. Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu. Sed arcu lectus auctor vitae, consectetuer et venenatis eget velit. Sed augue orci, lacinia eu tincidunt et eleifend nec lacus. Donec ultricies nisl ut felis, suspendisse potenti. Lorem ipsum ligula ut hendrerit mollis, ipsum erat vehicula risus, eu suscipit sem libero nec erat. Aliquam erat volutpat. Sed congue augue vitae neque. Nulla consectetuer porttitor pede. Fusce purus morbi tortor magna condimentum vel, placerat id blandit sit amet tortor.
-                Mauris sed libero. Suspendisse facilisis nulla in lacinia laoreet, lorem velit accumsan velit vel matt
-              </p>
-              <Button sx={{ mt: 'auto', ml: 'auto', width: '40%' }} variant="contained">Lue lisää</Button>
+              <div><Image  src={kuva1} alt='testikuva' layout='responsive'/></div>
+              <Box sx={textBox}>
+                <h2>Lorem ipsum</h2>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem. Quisque ligula eros ullamcorper</p>
+                <Link href="/palvelut/#section1">
+                  <a>
+                    <Button sx={{}} variant="contained">Lue lisää</Button>
+                  </a>
+                </Link>
+              </Box>
             </Box>
             <Box sx={contentBox}>
-              <h2>Dolor sit amet</h2>
-              <Image  src={kuva2} alt='testikuva' layout='responsive'/>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem. Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu. Sed arcu lectus auctor vitae, consectetuer et venenatis eget velit. Sed augue orci, lacinia eu tincidunt et eleifend nec lacus. Donec ultricies nisl ut felis, suspendisse potenti. Lorem ipsum ligula ut hendrerit mollis, ipsum erat vehicula risus, eu suscipit sem libero nec erat. Aliquam erat volutpat. Sed congue augue vitae neque. Nulla consectetuer porttitor pede. Fusce purus morbi tortor magna condimentum vel, placerat id blandit sit amet tortor.
-                Mauris sed libero. Suspendisse facilisis nulla in lacinia laoreet, lorem velit accumsan velit vel mattis libero nisl et sem. Proin interdum maecenas massa turpis sagittis in, interdum non lobortis vitae massa. Quisque purus lectus, posuere eget imperdiet nec sodales id arcu. Vestibulum elit pede dictum eu, viverra non tincidunt eu ligula..
-              </p>
-              <Link href="/palvelut/#section2">
-                <a>
-                  <Button sx={{ mt: 'auto', ml: 'auto', width: '40%' }} variant="contained">Lue lisää</Button>
-                </a>
-              </Link>
+              <div><Image  src={kuva2} alt='testikuva' layout='responsive'/></div>
+              <Box sx={textBox}>
+                <h2>Lorem ipsum</h2>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem. Quisque ligula eros ullamcorper</p>
+                <Link href="/palvelut/#section2">
+                  <a>
+                    <Button sx={{}} variant="contained">Lue lisää</Button>
+                  </a>
+                </Link>
+              </Box>
             </Box>
             <Box sx={contentBox}>
-              <h2>Consectetuer adipiscing</h2>
-              <Image  src={kuva3} alt='testikuva' layout='responsive'/>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem. Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu. Sed arcu lectus auctor vitae, consectetuer et venenatis eget velit. Sed augue orci, lacinia eu tincidunt et eleifend nec lacus. Donec ultricies nisl ut felis, suspendisse potenti. Lorem ipsum ligula ut hendrerit mollis, ipsum erat vehicula risus, eu suscipit sem libero nec erat. Aliquam erat volutpat. Sed congue augue vitae neque. Nulla consectetuer porttitor pede. Fusce purus morbi tortor magna condimentum vel, placerat id blandit sit amet tortor.
-              </p>
+              <div><Image  src={kuva3} alt='testikuva' layout='responsive'/></div>
+              <Box sx={textBox}>
+                <h2>Lorem ipsum</h2>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem. Quisque ligula eros ullamcorper</p>
+                <Link href="/palvelut/#section3">
+                  <a>
+                    <Button sx={{}} variant="contained">Lue lisää</Button>
+                  </a>
+                </Link>
+              </Box>
             </Box>
           </Box>
         </Container>

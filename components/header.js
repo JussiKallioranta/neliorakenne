@@ -24,14 +24,15 @@ const header = {
   '& h1': {
     margin: 0,
     fontWeight: 300,
-    fontStyle: 'italic'
+    fontStyle: 'italic',
+    color: '#fff'
   },
 }
 
 const menuButton = {
   display: {
     mobile: 'flex',
-    laptop: 'none'
+    tablet: 'none'
   },
   m: 0,
   p: 0
@@ -40,7 +41,7 @@ const menuButton = {
 const menuBar = {
   display: {
     mobile: 'none',
-    laptop: 'block'
+    tablet: 'block'
   },
 }
 
@@ -60,7 +61,7 @@ const Header = () => {
               </Box>
             </a>
           </Link>
-          <Box sx={{ textAlign: 'center', '& h1': { color: '#fff' } }}>
+          <Box sx={{ textAlign: 'center' }}>
             <h1>Slogan tähän</h1>
           </Box>
           <IconButton sx={menuButton} onClick={() => setMobileNavOpen(!mobileNavOpen)}>
@@ -71,7 +72,7 @@ const Header = () => {
           <Navigation />
         </Box>
       </Box>
-      <Box sx={{ height: { mobile: '80px', laptop: '140px' } }}/>
+      <Box sx={{ height: { mobile: '80px', tablet: '140px' } }}/>
       <Box>
         <Drawer open={mobileNavOpen} onClose={() => setMobileNavOpen(false)} anchor='top' PaperProps = {{ sx: { backgroundColor: 'secondary.main' } }} >
           <Box sx={{ height: '5rem' }}></Box>
