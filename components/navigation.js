@@ -22,7 +22,7 @@ const navWrap = {
   display: 'flex',
   flexDirection: {
     mobile: 'column',
-    tablet: 'row'
+    laptop: 'row'
   },
   justifyContent: 'center',
   pb: 2,

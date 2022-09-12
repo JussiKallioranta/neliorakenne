@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Box, Container } from '@mui/material'
 import profilePic from '../public/profile_picture.png'
+import { height } from '@mui/system'
 
 const grid4Columns = {
   display: 'grid',
@@ -34,16 +35,24 @@ const textBox = {
   }
 }
 
+const filler = {
+  display: {
+    mobile: 'none',
+    laptop: 'block'
+  },
+  height: '300px'
+}
+
 export default function Contact() {
   return (
     <>
       <Head>
-        <title>Neliörakenne</title>
-        <meta name="description" content="Neliörakenne" />
+        <title>Neliörakenne | Yhteystiedot</title>
+        <meta name="description" content="Neliörakenne | Yhteystiedot" />
         <link rel="icon" href="/favicon.ico" />
         <meta name="keywords" content="rakennuspalvelut" />
       </Head>
-      <div>
+      <Box sx={{ py: 2 }}>
         <Container maxWidth='xl'>
           <h1>Yhteystiedot</h1>
           <Box sx={grid4Columns}>
@@ -65,7 +74,7 @@ export default function Contact() {
                   </li>
                   <li>
                     <p>
-                      myynti@neliorakenne.fi
+                      <a href="mailto:myynti@neliorakenne.fi">myynti@neliorakenne.fi</a>
                     </p>
                   </li>
                 </ul>
@@ -89,7 +98,7 @@ export default function Contact() {
                   </li>
                   <li>
                     <p>
-                      myynti@neliorakenne.fi
+                      <a href="mailto:myynti@neliorakenne.fi">myynti@neliorakenne.fi</a>
                     </p>
                   </li>
                 </ul>
@@ -113,7 +122,7 @@ export default function Contact() {
                   </li>
                   <li>
                     <p>
-                      myynti@neliorakenne.fi
+                      <a href="mailto:myynti@neliorakenne.fi">myynti@neliorakenne.fi</a>
                     </p>
                   </li>
                 </ul>
@@ -137,15 +146,16 @@ export default function Contact() {
                   </li>
                   <li>
                     <p>
-                      myynti@neliorakenne.fi
+                      <a href="mailto:myynti@neliorakenne.fi">myynti@neliorakenne.fi</a>
                     </p>
                   </li>
                 </ul>
               </Box>
             </Box>
           </Box>
+          <Box sx={filler}></Box>
         </Container>
-      </div>
+      </Box>
     </>
   )
 }
