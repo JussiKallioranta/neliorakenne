@@ -17,11 +17,6 @@ const grid2Columns = {
   mb: 2,
 }
 
-const imageWrap = {
-  display: 'flex',
-  justifyContent: 'center'
-}
-
 const reverse = {
   gridTemplateColumns: {
     laptop: '2fr 1fr',
@@ -35,44 +30,75 @@ const reverse = {
   }
 }
 
+const contentWrap = {
+  '& p': {
+    textAlign: 'justify'
+  },
+  '& h2': {
+    my: 2
+  },
+  '&:after': {
+    content: '""',
+    clear: 'both',
+    display: 'table'
+  },
+  mb: 4 
+}
+
+const imageWrap = {
+  height: {
+    laptop: '40%',
+    tablet: '200px',
+    mobile: '100%'
+  },
+  width: {
+    laptop: '40%',
+    tablet: '300px',
+    mobile: '100%'
+  },
+  float: {
+    tablet: 'left',
+    mobile: 'none'
+  },
+  mr: {
+    laptop: 4,
+    tablet: 2,
+    mobile: 0
+  },
+}
+
 export default function Services() {
   return (
     <>
       <Head>
-        <title>Neliörakenne</title>
-        <meta name="description" content="Neliörakenne" />
+        <title>Neliörakenne | Palvelut</title>
+        <meta name="description" content="Neliörakenne | Palvelut" />
         <link rel="icon" href="/favicon.ico" />
-        <meta name="keywords" content="rakennuspalvelut" />
+        <meta name="keywords" content="rakennuspalvelut remontointi palvelut" />
       </Head>
-      <div>
+      <Box sx={{ py: 2 }}>
         <Container maxWidth='xl'>
           <h1>Palvelut</h1>
-          <Box sx={grid2Columns}>
-            <Box sx={{}}><Image  src={kuva1} alt='testikuva' layout='responsive'/></Box>
-            <Box>
-              <h2 id="section1">Lorem ipsum</h2>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem. Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu. Sed arcu lectus auctor vitae, consectetuer et venenatis eget velit. Sed augue orci, lacinia eu tincidunt et eleifend nec lacus. Donec ultricies nisl ut felis, suspendisse potenti. Lorem ipsum ligula ut hendrerit mollis, ipsum erat vehicula risus, eu suscipit sem libero nec erat. Aliquam erat volutpat. Sed congue augue vitae neque. Nulla consectetuer porttitor pede. Fusce purus morbi tortor magna condimentum vel, placerat id blandit sit amet tortor.
-              </p>
-            </Box>
+          <Box sx={contentWrap}>
+            <h2 id="section1">Lorem ipsum</h2>
+            <Box sx={imageWrap}><Image  src={kuva1} alt='testikuva' layout='responsive'/></Box>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem. Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu. Sed arcu lectus auctor vitae, consectetuer et venenatis eget velit. Sed augue orci, lacinia eu tincidunt et eleifend nec lacus. Donec ultricies nisl ut felis, suspendisse potenti. Lorem ipsum ligula ut hendrerit mollis, ipsum erat vehicula risus, eu suscipit sem libero nec erat. Aliquam erat volutpat. Sed congue augue vitae neque. Nulla consectetuer porttitor pede. Fusce purus morbi tortor magna condimentum vel, placerat id blandit sit amet tortor.
+            </p>
           </Box>
-          <Box sx={{ ...grid2Columns, ...reverse }}>
-            <div><Image  src={kuva2} alt='testikuva' layout='responsive'/></div>
-            <Box>
-              <h2 id="section2">Lorem ipsum</h2>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem. Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu. Sed arcu lectus auctor vitae, consectetuer et venenatis eget velit. Sed augue orci, lacinia eu tincidunt et eleifend nec lacus. Donec ultricies nisl ut felis, suspendisse potenti. Lorem ipsum ligula ut hendrerit mollis, ipsum erat vehicula risus, eu suscipit sem libero nec erat. Aliquam erat volutpat. Sed congue augue vitae neque. Nulla consectetuer porttitor pede. Fusce purus morbi tortor magna condimentum vel, placerat id blandit sit amet tortor.
-              </p>
-            </Box>
+          <Box sx={contentWrap}>
+            <h2 id="section2">Lorem ipsum</h2>
+            <Box sx={imageWrap}><Image  src={kuva2} alt='testikuva' layout='responsive'/></Box>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem. Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu. Sed arcu lectus auctor vitae, consectetuer et venenatis eget velit. Sed augue orci, lacinia eu tincidunt et eleifend nec lacus. Donec ultricies nisl ut felis, suspendisse potenti. Lorem ipsum ligula ut hendrerit mollis, ipsum erat vehicula risus, eu suscipit sem libero nec erat. Aliquam erat volutpat. Sed congue augue vitae neque. Nulla consectetuer porttitor pede. Fusce purus morbi tortor magna condimentum vel, placerat id blandit sit amet tortor.
+            </p>
           </Box>
-          <Box sx={grid2Columns}>
-            <div><Image  src={kuva3} alt='testikuva' layout='responsive'/></div>
-            <Box>
-              <h2 id="section3">Lorem ipsum</h2>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem. Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu. Sed arcu lectus auctor vitae, consectetuer et venenatis eget velit. Sed augue orci, lacinia eu tincidunt et eleifend nec lacus. Donec ultricies nisl ut felis, suspendisse potenti. Lorem ipsum ligula ut hendrerit mollis, ipsum erat vehicula risus, eu suscipit sem libero nec erat. Aliquam erat volutpat. Sed congue augue vitae neque. Nulla consectetuer porttitor pede. Fusce purus morbi tortor magna condimentum vel, placerat id blandit sit amet tortor.
-              </p>
-            </Box>
+          <Box sx={contentWrap}>
+            <h2 id="section3">Lorem ipsum</h2>
+            <Box sx={imageWrap}><Image  src={kuva3} alt='testikuva' layout='responsive'/></Box>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem. Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu. Sed arcu lectus auctor vitae, consectetuer et venenatis eget velit. Sed augue orci, lacinia eu tincidunt et eleifend nec lacus. Donec ultricies nisl ut felis, suspendisse potenti. Lorem ipsum ligula ut hendrerit mollis, ipsum erat vehicula risus, eu suscipit sem libero nec erat. Aliquam erat volutpat. Sed congue augue vitae neque. Nulla consectetuer porttitor pede. Fusce purus morbi tortor magna condimentum vel, placerat id blandit sit amet tortor.
+            </p>
           </Box>
         </Container>
-      </div>
+      </Box>
     </>
   )
 }
