@@ -1,6 +1,6 @@
 import React  from 'react';
 import { Box, Container } from '@mui/material'
-import Logo2 from '../public/logo_teksti.png'
+import Logo from '../public/neliorakenne_logo_teksti.png'
 import InstagramIcon from '../public/Instagram_Glyph_White.png'
 import Image from 'next/image';
 import { Icon } from '@mui/material';
@@ -45,7 +45,7 @@ const Footer = () => {
     <Box sx={footer}>
       <Container maxWidth='xl'>
         <Box sx={footerCenterRow}>
-          <Image src={Logo2} alt='logo' width={200} height={42} unoptimized={true}/>
+          <Image src={Logo} alt='logo' width={300} height={75} unoptimized={true}/>
         </Box>
         <Box sx={footerCenterRow}>
           <Link href='https://instagram.com/neliorakenne'>

@@ -1,10 +1,11 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Box, Button, Container } from '@mui/material'
-import Testikuva from '../public/testikuva.png'
-import kuva1 from '../public/kuva1.png'
-import kuva2 from '../public/kuva2.png'
-import kuva3 from '../public/kuva3.png'
+import Testikuva from '../public/neliorakenne_etusivu_2.jpg'
+import Testikuva2 from '../public/neliorakenne_etusivu_pieni.jpg'
+import kuva1 from '../public/neliorakenne_palvelut_pieni_1.jpg'
+import kuva2 from '../public/neliorakenne_palvelut_pieni_2.jpg'
+import kuva3 from '../public/neliorakenne_palvelut_pieni_3.jpg'
 import Link from 'next/link'
 import { grey } from '@mui/material/colors'
 
@@ -100,6 +101,15 @@ const textInImage ={
   }
 }
 
+const imageWrap = {
+  width: {
+    //laptop: '500px',
+    //tablet: '40%',
+    mobile: '100%'
+  },
+  p: 4
+}
+
 export default function Home() {
   return (
     <>
@@ -113,18 +123,18 @@ export default function Home() {
         <Box sx={mainImageWrap}>
           <Image src={Testikuva} alt='testikuva' layout='responsive'/>
           <Box sx={textInImage}>
-            <h1>Suomen Neliörakenne Oy</h1>
+            <h1>Suomen Neliö Rakenne Oy</h1>
           </Box>
         </Box>
         <Box sx={mobileImageWrap}>
-          <Image src={Testikuva} alt='testikuva' layout='fill' objectFit='cover' objectPosition='right'/>
+          <Image src={Testikuva} alt='testikuva' layout='fill' objectFit='cover' objectPosition='center'/>
           <Box sx={textInImage}>
-            <h1>Suomen Neliörakenne Oy</h1>
+            <h1>Suomen Neliö Rakenne Oy</h1>
           </Box>
         </Box>
         <Container maxWidth='xl'>
           <Box sx={grid2Columns}>
-            <div><Image  src={kuva1} alt='testikuva'  layout='responsive' width={300} height={200} unoptimized={true}/></div>
+            <Box sx={imageWrap}><Image  src={Testikuva2} alt='testikuva'  layout='responsive'/></Box>
             <Box sx={headerTextBox}>
               <h2>Lorem ipsum</h2>
               <h3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem. Quisque ligula eros ullamcorper quis. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
@@ -138,7 +148,7 @@ export default function Home() {
               <Box sx={contentBox}>
                 <div><Image  src={kuva1} alt='testikuva' layout='responsive'/></div>
                 <Box sx={textBox}>
-                  <h2>Lorem ipsum</h2>
+                  <h2>Keittiöremontit</h2>
                   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem. Quisque ligula eros ullamcorper</p>
                   <Link href="/palvelut/#section1">
                     <a>
@@ -150,7 +160,7 @@ export default function Home() {
               <Box sx={contentBox}>
                 <div><Image  src={kuva2} alt='testikuva' layout='responsive'/></div>
                 <Box sx={textBox}>
-                  <h2>Lorem ipsum</h2>
+                  <h2>Kylppäriremontit</h2>
                   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem. Quisque ligula eros ullamcorper</p>
                   <Link href="/palvelut/#section2">
                     <a>
@@ -162,7 +172,7 @@ export default function Home() {
               <Box sx={contentBox}>
                 <div><Image  src={kuva3} alt='testikuva' layout='responsive'/></div>
                 <Box sx={textBox}>
-                  <h2>Lorem ipsum</h2>
+                  <h2>Kattoremontit</h2>
                   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem. Quisque ligula eros ullamcorper</p>
                   <Link href="/palvelut/#section3">
                     <a>

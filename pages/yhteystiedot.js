@@ -8,8 +8,8 @@ const grid4Columns = {
   display: 'grid',
   gridGap: '2em',
   gridTemplateColumns: {
-    laptop: '1fr 1fr 1fr 1fr',
-    tablet: '1fr 1fr',
+    laptop: '1fr 1fr 1fr',
+    tablet: '1fr 1fr 1fr',
     mobile: '1fr'
   },
   my: 4,
@@ -17,7 +17,14 @@ const grid4Columns = {
 
 const contentBox = {
   display: 'flex',
-  flexDirection: 'column',
+  alignItems: {
+    mobile: 'center',
+    tablet: 'unset'
+  },
+  flexDirection: {
+    mobile: 'row',
+    tablet: 'column'
+  },
   color: '#000',
   '& h2': {
     color: 'primary.main',
@@ -35,10 +42,14 @@ const textBox = {
   }
 }
 
+const imageWrap = {
+  width: '100%'
+}
+
 const filler = {
   display: {
     mobile: 'none',
-    laptop: 'block'
+    tablet: 'block'
   },
   height: '300px'
 }
@@ -57,7 +68,7 @@ export default function Contact() {
           <h1>Yhteystiedot</h1>
           <Box sx={grid4Columns}>
             <Box sx={contentBox}>
-              <div><Image  src={profilePic} alt='profile' layout='responsive'/></div>
+              <Box sx={imageWrap}><Image  src={profilePic} alt='profile' layout='responsive'/></Box>
               <Box sx={textBox}>
                 <ul>
                   <li>
@@ -81,7 +92,7 @@ export default function Contact() {
               </Box>
             </Box>
             <Box sx={contentBox}>
-              <div><Image  src={profilePic} alt='profile' layout='responsive'/></div>
+              <Box sx={imageWrap}><Image  src={profilePic} alt='profile' layout='responsive'/></Box>
               <Box sx={textBox}>
                 <ul>
                   <li>
@@ -105,31 +116,7 @@ export default function Contact() {
               </Box>
             </Box>
             <Box sx={contentBox}>
-              <div><Image  src={profilePic} alt='profile' layout='responsive'/></div>
-              <Box sx={textBox}>
-                <ul>
-                  <li>
-                    <p>
-                      <Box component="span" sx={{ fontWeight: '500' }}>
-                          Etunimi Sukunimi
-                      </Box>
-                    </p> 
-                  </li>
-                  <li>
-                    <p>
-                      +358 45 662 6657
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      <a href="mailto:myynti@neliorakenne.fi">myynti@neliorakenne.fi</a>
-                    </p>
-                  </li>
-                </ul>
-              </Box>
-            </Box>
-            <Box sx={contentBox}>
-              <Image  src={profilePic} alt='profile' layout='responsive'/>
+              <Box sx={imageWrap}><Image  src={profilePic} alt='profile' layout='responsive'/></Box>
               <Box sx={textBox}>
                 <ul>
                   <li>
