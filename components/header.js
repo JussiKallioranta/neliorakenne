@@ -72,7 +72,7 @@ const Header = () => {
             </a>
           </Link>
           <Box sx={headerText}>
-            <h1>Slogan tähän</h1>
+            <h1></h1>
           </Box>
           <IconButton sx={menuButton} onClick={() => setMobileNavOpen(!mobileNavOpen)}>
             <MenuRoundedIcon sx={{ color: 'primary.main', width: '3rem', height: '3rem' }}/>

@@ -1,8 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Box, Button, Container } from '@mui/material'
-import Testikuva from '../public/neliorakenne_etusivu_2.jpg'
-import Testikuva2 from '../public/neliorakenne_etusivu_pieni.jpg'
+import HeadImage from '../public/neliorakenne_etusivu_2.jpg'
 import kuva1 from '../public/neliorakenne_palvelut_pieni_1.jpg'
 import kuva2 from '../public/neliorakenne_palvelut_pieni_2.jpg'
 import kuva3 from '../public/neliorakenne_palvelut_pieni_3.jpg'
@@ -13,7 +12,8 @@ const grid2Columns = {
   display: 'grid',
   gridGap: '2em',
   gridTemplateColumns: {
-    laptop: '1fr 1fr',
+    // laptop: '1fr 1fr', // jos löytyy kuva tekstin rinnalle
+    laptop: '1fr',
     mobile: '1fr'
   },
   my: 6
@@ -38,7 +38,6 @@ const contentBox = {
     mb: 1,
   },
   backgroundColor: 'black'
-  //boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'
 }
 
 const textBox = {
@@ -52,6 +51,7 @@ const headerTextBox = {
   textAlign: 'center',
   flexDirection: 'column',
   justifyContent: 'center',
+  alignItems: 'center',
   '& h2': {
     color: 'primary.main',
     my: 2,
@@ -115,30 +115,33 @@ export default function Home() {
     <>
       <Head>
         <title>Neliörakenne</title>
-        <meta name="description" content="Neliörakenne" />
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="keywords" content="rakennuspalvelut" />
+        <meta name="description" content="Neliörakenne, remontointipalvelua Uudellamaalla" />
+        <link rel="icon" href="/icon.png" />
+        <meta name="keywords" content="remontti, remontit, remontointi, kylpyhuoneremontti, kattoremontit, keittiöremontti, rakennuspalvelut, uusimaa"/>
       </Head>
       <div>
         <Box sx={mainImageWrap}>
-          <Image src={Testikuva} alt='testikuva' layout='responsive'/>
+          <Image src={HeadImage} alt='' layout='responsive'/>
           <Box sx={textInImage}>
             <h1>Suomen Neliö Rakenne Oy</h1>
           </Box>
         </Box>
         <Box sx={mobileImageWrap}>
-          <Image src={Testikuva} alt='testikuva' layout='fill' objectFit='cover' objectPosition='center'/>
+          <Image src={HeadImage} alt='' layout='fill' objectFit='cover' objectPosition='center'/>
           <Box sx={textInImage}>
             <h1>Suomen Neliö Rakenne Oy</h1>
           </Box>
         </Box>
         <Container maxWidth='xl'>
           <Box sx={grid2Columns}>
-            <Box sx={imageWrap}><Image  src={Testikuva2} alt='testikuva'  layout='responsive'/></Box>
+            {/*<Box sx={imageWrap}><Image  src={HeadImage} alt=''  layout='responsive'/></Box>*/}
             <Box sx={headerTextBox}>
-              <h2>Lorem ipsum</h2>
-              <h3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem. Quisque ligula eros ullamcorper quis. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-              </h3>
+              <Box sx={{ width: { laptop: '50%' }, px: { mobile: 6, laptop: 0 } }}>
+                <h2>Suomen Neliö Rakenne lyhyesti</h2>
+                <h3>
+                  Me olemme uusimaalainen remonttiliike, jonka kanssa yhteistyö on sujuvaa ja luotettavaa. Toteutamme aina remontit laadukkaasti alusta loppuun, ja meille tärkein tavoite remontissa on tyytyväinen asiakas.
+                </h3>
+              </Box>
             </Box>
           </Box>
         </Container>
@@ -146,10 +149,11 @@ export default function Home() {
           <Container maxWidth='xl'>
             <Box sx={grid3Columns}>
               <Box sx={contentBox}>
-                <div><Image  src={kuva1} alt='testikuva' layout='responsive'/></div>
+                <div><Image  src={kuva2} alt='' layout='responsive'/></div>
                 <Box sx={textBox}>
-                  <h2>Keittiöremontit</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem. Quisque ligula eros ullamcorper</p>
+                  <h2>Kylpyhuoneremontit</h2>
+                  {/* eslint-disable-next-line */}
+                  <p>Toteutamme kodin märkätilaremontit ammattitaidolla mielesi  mukaan, "avaimet käteen" palveluna.</p>
                   <Link href="/palvelut/#section1">
                     <a>
                       <Button sx={{}} variant="contained">Lue lisää</Button>
@@ -158,11 +162,11 @@ export default function Home() {
                 </Box>
               </Box>
               <Box sx={contentBox}>
-                <div><Image  src={kuva2} alt='testikuva' layout='responsive'/></div>
+                <div><Image  src={kuva1} alt='' layout='responsive'/></div>
                 <Box sx={textBox}>
-                  <h2>Kylppäriremontit</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem. Quisque ligula eros ullamcorper</p>
-                  <Link href="/palvelut/#section2">
+                  <h2>Keittiöremontit</h2>
+                  <p>Päivitämme keittiösi nykyaikaiseen, suunnitelmienne mukaan. Meiltä myös muut kodin kalusteasennukset.</p>
+                  <Link href="/palvelut/#section1">
                     <a>
                       <Button sx={{}} variant="contained">Lue lisää</Button>
                     </a>
@@ -170,11 +174,11 @@ export default function Home() {
                 </Box>
               </Box>
               <Box sx={contentBox}>
-                <div><Image  src={kuva3} alt='testikuva' layout='responsive'/></div>
+                <div><Image  src={kuva3} alt='' layout='responsive'/></div>
                 <Box sx={textBox}>
                   <h2>Kattoremontit</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem. Quisque ligula eros ullamcorper</p>
-                  <Link href="/palvelut/#section3">
+                  <p>Turvallinen ja laadukas kattoremontti meiltä. Pyydä ilmainen katon arviointi!</p>
+                  <Link href="/palvelut/#section2">
                     <a>
                       <Button sx={{}} variant="contained">Lue lisää</Button>
                     </a>
