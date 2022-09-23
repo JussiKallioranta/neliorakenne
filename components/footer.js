@@ -94,7 +94,7 @@ const Footer = () => {
               </li>
               <li>
                 <p>
-                  myynti@neliorakenne.fi
+                  <a href="mailto:myynti@neliorakenne.fi">myynti(at)neliorakenne.fi</a>
                 </p>
               </li>
             </ul>

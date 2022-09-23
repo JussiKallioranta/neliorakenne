@@ -1,23 +1,25 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Box, Button, Container } from '@mui/material'
-import Testikuva from '../public/testikuva2.png'
+import { Box, Container } from '@mui/material'
 import kuva1 from '../public/neliorakenne_palvelut_1.jpg'
 import kuva2 from '../public/neliorakenne_palvelut_2.jpg'
 import kuva3 from '../public/neliorakenne_palvelut_3.jpg'
+import kuva4 from '../public/palvelut-1.jpg'
+import kuva5 from '../public/palvelut-2.jpg'
+import kuva7 from '../public/palvelut-4.jpg'
 
-const grid2Columns = {
+const gridWrap = {
   display: 'grid',
   gridGap: '2em',
   gridTemplateColumns: {
-    laptop: '1fr 2fr',
+    laptop: 'repeat(5, 1fr)',
     tablet: '1fr 1fr',
     mobile: '1fr'
   },
-  mb: 2,
+  mb: 6,
 }
 
-const reverse = {
+/*const reverse = {
   gridTemplateColumns: {
     laptop: '2fr 1fr',
     tablet: '1fr 1fr',
@@ -28,53 +30,20 @@ const reverse = {
       tablet: '1 / 1 / 2 / 2'
     }
   }
-}
+}*/
 
 const contentWrap = {
+  p: 4,
   position: 'relative',
-  '& p': {
-    textAlign: 'justify',
-    m: {
-      laptop: 6,
-      tablet: 4,
-      mobile: 3
-    },
-  },
-  '& h2': {
-    my: 2
-  },
-  '&:after': {
-    content: '""',
-    clear: 'both',
-    display: 'table'
-  },
-  mb: 4 
+  display: 'flex',
+  alignItems: 'center',
+  gridColumnEnd: {
+    laptop: 'span 2'
+  }
 }
 
 const imageWrap = {
-  /*height: {
-    laptop: '40%',
-    tablet: '200px',
-    mobile: '100%'
-  },*/
-  width: {
-    laptop: '400px',
-    tablet: '40%',
-    mobile: '100%'
-  },
-  float: {
-    tablet: 'left',
-    mobile: 'none'
-  },
-  mr: {
-    laptop: 6,
-    tablet: 4,
-    mobile: 0
-  },
-  mb: {
-    tablet: 4,
-    mobile: 0
-  },
+  alignSelf: 'center',
 }
 
 export default function Services() {
@@ -82,30 +51,41 @@ export default function Services() {
     <>
       <Head>
         <title>Neliörakenne | Palvelut</title>
-        <meta name="description" content="Neliörakenne | Palvelut" />
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="keywords" content="rakennuspalvelut remontointi palvelut" />
+        <meta name="description" content="Neliörakenne, remontointipalvelua Uudellamaalla" />
+        <link rel="icon" href="/icon.png" />
+        <meta name="keywords" content="remontti, remontit, remontointi, kylpyhuoneremontti, kattoremontit, keittiöremontti, rakennuspalvelut, uusimaa, palvelut"/>
       </Head>
       <Box sx={{ py: 2 }}>
-        <Container maxWidth='xl'>
+        <Container maxWidth='xl' sx={{ position: 'relative' }}>
           <h1>Palvelut</h1>
-          <Box sx={contentWrap}>
-            <h2><span style={{ position: 'absolute', top: '-150px' }} id="section1"></span>Lorem ipsum</h2>
-            <Box sx={imageWrap}><Image  src={kuva1} alt='testikuva' layout='responsive'/></Box>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem. Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu. Sed arcu lectus auctor vitae, consectetuer et venenatis eget velit. Sed augue orci, lacinia eu tincidunt et eleifend nec lacus. Donec ultricies nisl ut felis, suspendisse potenti. Lorem ipsum ligula ut hendrerit mollis, ipsum erat vehicula risus, eu suscipit sem libero nec erat. Aliquam erat volutpat. Sed congue augue vitae neque. Nulla consectetuer porttitor pede. Fusce purus morbi tortor magna condimentum vel, placerat id blandit sit amet tortor.
-            </p>
+          
+          <Box sx={gridWrap}>
+            <Box sx={contentWrap}>
+              <div>
+                <h2><span style={{ position: 'absolute', top: '-150px' }} id="section1"/>Sisäremontit</h2>
+                <p>
+                  {/* eslint-disable-next-line */}
+                  Laadukkaat sisäremontit Uudenmaan alueella keittiöstä kylpyhuoneeseen. Toteutamme ammattitaidolla kaikki kotisi sisäremontit huolettomasti "avaimet käteen" palveluna toiveidesi mukaan. Remontilla parannat kotisi asumismukavuutta, sekä talon arvoa. Kysy lisää!
+                </p>
+              </div>
+            </Box>
+            <Box sx={imageWrap}><Image  src={kuva1} alt='' layout='responsive'/></Box>
+            <Box sx={imageWrap}><Image  src={kuva2} alt='' layout='responsive'/></Box>
+            <Box sx={imageWrap}><Image  src={kuva7} alt='' layout='responsive'/></Box>
           </Box>
-          <Box sx={contentWrap}>
-            <h2><span style={{ position: 'absolute', top: '-150px' }} id="section2"/>Lorem ipsum</h2>
-            <Box sx={imageWrap}><Image  src={kuva2} alt='testikuva' layout='responsive'/></Box>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem. Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu. Sed arcu lectus auctor vitae, consectetuer et venenatis eget velit. Sed augue orci, lacinia eu tincidunt et eleifend nec lacus. Donec ultricies nisl ut felis, suspendisse potenti. Lorem ipsum ligula ut hendrerit mollis, ipsum erat vehicula risus, eu suscipit sem libero nec erat. Aliquam erat volutpat. Sed congue augue vitae neque. Nulla consectetuer porttitor pede. Fusce purus morbi tortor magna condimentum vel, placerat id blandit sit amet tortor.
-            </p>
-          </Box>
-          <Box sx={contentWrap}>
-            <h2><span style={{ position: 'absolute', top: '-150px' }} id="section3"/>Lorem ipsum</h2>
-            <Box sx={imageWrap}><Image  src={kuva3} alt='testikuva' layout='responsive'/></Box>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem. Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu. Sed arcu lectus auctor vitae, consectetuer et venenatis eget velit. Sed augue orci, lacinia eu tincidunt et eleifend nec lacus. Donec ultricies nisl ut felis, suspendisse potenti. Lorem ipsum ligula ut hendrerit mollis, ipsum erat vehicula risus, eu suscipit sem libero nec erat. Aliquam erat volutpat. Sed congue augue vitae neque. Nulla consectetuer porttitor pede. Fusce purus morbi tortor magna condimentum vel, placerat id blandit sit amet tortor.
-            </p>
+          
+          <Box sx={gridWrap}>
+            <Box sx={contentWrap}>
+              <div>
+                <h2><span style={{ position: 'absolute', top: '-150px' }} id="section2"/>Ulkoremontit</h2>
+                <p>
+                Ulkoremontti auttaa ylläpitämään talosi yleiskuntoa ja säilyttää rakennuksesi arvon. Laadukkaasti toteutettuna julkisivuremontti saa talosi näyttämään paremmalta ja voimaan paremmin. Me toteutamme kaikki ulkoremontit kotisi tarpeisiin, mm. kattoremontti, ulkoverhousremontti, ulkomaalaus, ikkuna- ja oviremontti. Kysy tarjous!
+                </p>
+              </div>
+            </Box>
+            <Box sx={imageWrap}><Image  src={kuva5} alt='' layout='responsive'/></Box>
+            <Box sx={imageWrap}><Image  src={kuva4} alt='' layout='responsive'/></Box>
+            <Box sx={imageWrap}><Image  src={kuva3} alt='' layout='responsive'/></Box>
           </Box>
         </Container>
       </Box>
