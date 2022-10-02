@@ -33,7 +33,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>Neliörakenne</title>
-        <meta name="keywords" content="rakennuspalvelut" />
+        <meta name="keywords" content="remontti, remontit, remontointi, kylpyhuoneremontti, kattoremontit, keittiöremontti, rakennuspalvelut, uusimaa, helsinki, espoo, vantaa, nurmijärvi"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
       </Head>
       <ThemeProvider theme={theme} >

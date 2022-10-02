@@ -52,16 +52,16 @@ export default function Contact() {
     <>
       <Head>
         <title>Neliörakenne | Yhteystiedot</title>
-        <meta name="description" content="Neliörakenne, remontointipalvelua Uudellamaalla" />
+        <meta name="description" content="Kysy rohkeasti lisää ja pyydä tarjous kotisi remontista soittamalla tai sähköpostilla" />
         <link rel="icon" href="/icon.png" />
-        <meta name="keywords" content="remontti, remontit, remontointi, kylpyhuoneremontti, kattoremontit, keittiöremontti, rakennuspalvelut, uusimaa, yhteystiedot"/>
+        <meta name="keywords" content="remontti, remontit, remontointi, kylpyhuoneremontti, kattoremontit, keittiöremontti, rakennuspalvelut, uusimaa, helsinki, espoo, vantaa, nurmijärvi, yhteystiedot"/>
       </Head>
       <Box sx={{ py: 2 }}>
         <Container maxWidth='xl'>
           <h1>Yhteystiedot</h1>
           <Box sx={grid4Columns}>
             <Box sx={contentBox}>
-              <Box sx={imageWrap}><Image  src={jerry} alt='profile' layout='responsive'/></Box>
+              <Box sx={imageWrap}><Image  src={jerry} alt='Jerry' layout='responsive'/></Box>
               <Box sx={textBox}>
                 <ul>
                   <li>
@@ -85,7 +85,7 @@ export default function Contact() {
               </Box>
             </Box>
             <Box sx={contentBox}>
-              <Box sx={imageWrap}><Image  src={oliver} alt='profile' layout='responsive'/></Box>
+              <Box sx={imageWrap}><Image  src={oliver} alt='Oliver' layout='responsive'/></Box>
               <Box sx={textBox}>
                 <ul>
                   <li>
@@ -109,7 +109,7 @@ export default function Contact() {
               </Box>
             </Box>
             <Box sx={contentBox}>
-              <Box sx={imageWrap}><Image  src={nuutti} alt='profile' layout='responsive'/></Box>
+              <Box sx={imageWrap}><Image  src={nuutti} alt='Nuutti' layout='responsive'/></Box>
               <Box sx={textBox}>
                 <ul>
                   <li>
