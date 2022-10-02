@@ -51,9 +51,9 @@ export default function Services() {
     <>
       <Head>
         <title>Neliörakenne | Palvelut</title>
-        <meta name="description" content="Neliörakenne, remontointipalvelua Uudellamaalla" />
+        <meta name="description" content="Neliörakenne toteuttaa laadukkaat sisäremontit Uudenmaan alueella keittiöstä kylpyhuoneeseen. Me teemme myös kaikki ulkoremontit kotisi tarpeisiin, kuten kattoremontit, ulkoverhousremontit, ulkomaalaus-, ikkuna- ja oviremontit" />
         <link rel="icon" href="/icon.png" />
-        <meta name="keywords" content="remontti, remontit, remontointi, kylpyhuoneremontti, kattoremontit, keittiöremontti, rakennuspalvelut, uusimaa, palvelut"/>
+        <meta name="keywords" content="remontti, remontit, remontointi, kylpyhuoneremontti, kattoremontit, keittiöremontti, rakennuspalvelut, uusimaa, helsinki, espoo, vantaa, nurmijärvi, palvelut"/>
       </Head>
       <Box sx={{ py: 2 }}>
         <Container maxWidth='xl' sx={{ position: 'relative' }}>
@@ -69,9 +69,9 @@ export default function Services() {
                 </p>
               </div>
             </Box>
-            <Box sx={imageWrap}><Image  src={kuva1} alt='' layout='responsive'/></Box>
-            <Box sx={imageWrap}><Image  src={kuva2} alt='' layout='responsive'/></Box>
-            <Box sx={imageWrap}><Image  src={kuva7} alt='' layout='responsive'/></Box>
+            <Box sx={imageWrap}><Image  src={kuva1} alt='keittöremontti' layout='responsive'/></Box>
+            <Box sx={imageWrap}><Image  src={kuva2} alt='kylpyhuoneremontti' layout='responsive'/></Box>
+            <Box sx={imageWrap}><Image  src={kuva7} alt='kylpyhuoneremontti' layout='responsive'/></Box>
           </Box>
           
           <Box sx={gridWrap}>
@@ -83,9 +83,9 @@ export default function Services() {
                 </p>
               </div>
             </Box>
-            <Box sx={imageWrap}><Image  src={kuva5} alt='' layout='responsive'/></Box>
-            <Box sx={imageWrap}><Image  src={kuva4} alt='' layout='responsive'/></Box>
-            <Box sx={imageWrap}><Image  src={kuva3} alt='' layout='responsive'/></Box>
+            <Box sx={imageWrap}><Image  src={kuva5} alt='kattoremontti' layout='responsive'/></Box>
+            <Box sx={imageWrap}><Image  src={kuva4} alt='kattoremontti' layout='responsive'/></Box>
+            <Box sx={imageWrap}><Image  src={kuva3} alt='kattoremontti' layout='responsive'/></Box>
           </Box>
         </Container>
       </Box>
