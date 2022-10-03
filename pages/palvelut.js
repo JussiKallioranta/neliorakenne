@@ -62,30 +62,30 @@ export default function Services() {
           <Box sx={gridWrap}>
             <Box sx={contentWrap}>
               <div>
-                <h2><span style={{ position: 'absolute', top: '-150px' }} id="section1"/>Sisäremontit</h2>
+                <h2><span style={{ position: 'absolute', top: '-150px' }} id="sisaremontit"/>Sisäremontit</h2>
                 <p>
                   {/* eslint-disable-next-line */}
                   Laadukkaat sisäremontit Uudenmaan alueella keittiöstä kylpyhuoneeseen. Toteutamme ammattitaidolla kaikki kotisi sisäremontit huolettomasti "avaimet käteen" palveluna toiveidesi mukaan. Remontilla parannat kotisi asumismukavuutta, sekä talon arvoa. Kysy lisää!
                 </p>
               </div>
             </Box>
-            <Box sx={imageWrap}><Image  src={kuva1} alt='keittöremontti' layout='responsive'/></Box>
-            <Box sx={imageWrap}><Image  src={kuva2} alt='kylpyhuoneremontti' layout='responsive'/></Box>
-            <Box sx={imageWrap}><Image  src={kuva7} alt='kylpyhuoneremontti' layout='responsive'/></Box>
+            <Box sx={imageWrap}><Image  src={kuva1} alt='keittöremontti' layout='responsive' placeholder='blur'/></Box>
+            <Box sx={imageWrap}><Image  src={kuva2} alt='kylpyhuoneremontti' layout='responsive' placeholder='blur'/></Box>
+            <Box sx={imageWrap}><Image  src={kuva7} alt='kylpyhuoneremontti' layout='responsive' placeholder='blur'/></Box>
           </Box>
           
           <Box sx={gridWrap}>
             <Box sx={contentWrap}>
               <div>
-                <h2><span style={{ position: 'absolute', top: '-150px' }} id="section2"/>Ulkoremontit</h2>
+                <h2><span style={{ position: 'absolute', top: '-150px' }} id="ulkoremontit"/>Ulkoremontit</h2>
                 <p>
                 Ulkoremontti auttaa ylläpitämään talosi yleiskuntoa ja säilyttää rakennuksesi arvon. Laadukkaasti toteutettuna julkisivuremontti saa talosi näyttämään paremmalta ja voimaan paremmin. Me toteutamme kaikki ulkoremontit kotisi tarpeisiin, mm. kattoremontti, ulkoverhousremontti, ulkomaalaus, ikkuna- ja oviremontti. Kysy tarjous!
                 </p>
               </div>
             </Box>
-            <Box sx={imageWrap}><Image  src={kuva5} alt='kattoremontti' layout='responsive'/></Box>
-            <Box sx={imageWrap}><Image  src={kuva4} alt='kattoremontti' layout='responsive'/></Box>
-            <Box sx={imageWrap}><Image  src={kuva3} alt='kattoremontti' layout='responsive'/></Box>
+            <Box sx={imageWrap}><Image  src={kuva5} alt='kattoremontti' layout='responsive' placeholder='blur'/></Box>
+            <Box sx={imageWrap}><Image  src={kuva4} alt='kattoremontti' layout='responsive' placeholder='blur'/></Box>
+            <Box sx={imageWrap}><Image  src={kuva3} alt='kattoremontti' layout='responsive' placeholder='blur'/></Box>
           </Box>
         </Container>
       </Box>

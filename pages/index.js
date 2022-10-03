@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Box, Button, Container } from '@mui/material'
 import HeadImage from '../public/neliorakenne_etusivu_2.jpg'
+import HeadImageSmall from '../public/neliorakenne_etusivu_3.jpg'
 import kuva1 from '../public/neliorakenne_palvelut_pieni_1.jpg'
 import kuva2 from '../public/neliorakenne_palvelut_pieni_2.jpg'
 import kuva3 from '../public/neliorakenne_palvelut_pieni_3.jpg'
@@ -127,7 +128,7 @@ export default function Home() {
           </Box>
         </Box>
         <Box sx={mobileImageWrap}>
-          <Image src={HeadImage} alt='pääkuva' layout='fill' objectFit='cover' objectPosition='center' priority sizes='(max-width: 640px) 200vw'/>
+          <Image src={HeadImageSmall} alt='pääkuva' layout='fill' objectFit='cover' objectPosition='center' priority/>
           <Box sx={textInImage}>
             <h1>Suomen Neliö Rakenne Oy</h1>
           </Box>
@@ -149,12 +150,12 @@ export default function Home() {
           <Container maxWidth='xl'>
             <Box sx={grid3Columns}>
               <Box sx={contentBox}>
-                <div><Image  src={kuva2} alt='kylpuhone' layout='responsive'/></div>
+                <div><Image  src={kuva2} alt='kylpuhone' layout='responsive' placeholder='blur'/></div>
                 <Box sx={textBox}>
                   <h2>Kylpyhuoneremontit</h2>
                   {/* eslint-disable-next-line */}
                   <p>Toteutamme kodin märkätilaremontit ammattitaidolla mielesi  mukaan, "avaimet käteen" palveluna.</p>
-                  <Link href="/palvelut/#section1">
+                  <Link href="/palvelut/#sisaremontit">
                     <a>
                       <Button sx={{}} variant="contained">Lue lisää</Button>
                     </a>
@@ -162,11 +163,11 @@ export default function Home() {
                 </Box>
               </Box>
               <Box sx={contentBox}>
-                <div><Image  src={kuva1} alt='keittö' layout='responsive'/></div>
+                <div><Image  src={kuva1} alt='keittö' layout='responsive' placeholder='blur'/></div>
                 <Box sx={textBox}>
                   <h2>Keittiöremontit</h2>
                   <p>Päivitämme keittiösi nykyaikaiseen, suunnitelmienne mukaan. Meiltä myös muut kodin kalusteasennukset.</p>
-                  <Link href="/palvelut/#section1">
+                  <Link href="/palvelut/#sisaremontit">
                     <a>
                       <Button sx={{}} variant="contained">Lue lisää</Button>
                     </a>
@@ -174,11 +175,11 @@ export default function Home() {
                 </Box>
               </Box>
               <Box sx={contentBox}>
-                <div><Image  src={kuva3} alt='katto' layout='responsive'/></div>
+                <div><Image  src={kuva3} alt='katto' layout='responsive' placeholder='blur'/></div>
                 <Box sx={textBox}>
                   <h2>Kattoremontit</h2>
                   <p>Turvallinen ja laadukas kattoremontti meiltä. Pyydä ilmainen katon arviointi!</p>
-                  <Link href="/palvelut/#section2">
+                  <Link href="/palvelut/#ulkoremontit">
                     <a>
                       <Button sx={{}} variant="contained">Lue lisää</Button>
                     </a>

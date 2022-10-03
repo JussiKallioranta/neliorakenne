@@ -61,7 +61,7 @@ export default function Contact() {
           <h1>Yhteystiedot</h1>
           <Box sx={grid4Columns}>
             <Box sx={contentBox}>
-              <Box sx={imageWrap}><Image  src={jerry} alt='Jerry' layout='responsive'/></Box>
+              <Box sx={imageWrap}><Image  src={jerry} alt='Jerry' layout='responsive' placeholder='blur'/></Box>
               <Box sx={textBox}>
                 <ul>
                   <li>
@@ -85,7 +85,7 @@ export default function Contact() {
               </Box>
             </Box>
             <Box sx={contentBox}>
-              <Box sx={imageWrap}><Image  src={oliver} alt='Oliver' layout='responsive'/></Box>
+              <Box sx={imageWrap}><Image  src={oliver} alt='Oliver' layout='responsive' placeholder='blur'/></Box>
               <Box sx={textBox}>
                 <ul>
                   <li>
@@ -109,7 +109,7 @@ export default function Contact() {
               </Box>
             </Box>
             <Box sx={contentBox}>
-              <Box sx={imageWrap}><Image  src={nuutti} alt='Nuutti' layout='responsive'/></Box>
+              <Box sx={imageWrap}><Image  src={nuutti} alt='Nuutti' layout='responsive' placeholder='blur'/></Box>
               <Box sx={textBox}>
                 <ul>
                   <li>
