@@ -6,13 +6,16 @@ import oliver from '../public/neliorakenne_oliver.jpg'
 import nuutti from '../public/neliorakenne_nuutti.jpg'
 
 const grid4Columns = {
-  display: 'grid',
-  gridGap: '2em',
-  gridTemplateColumns: {
-    laptop: '1fr 1fr 1fr',
-    tablet: '1fr 1fr 1fr',
-    mobile: '1fr'
-  },
+  display: 'flex',
+  justifyContent: 'space-around',
+  flexWrap: 'wrap',
+  //display: 'grid',
+  //gridGap: '2em',
+  //gridTemplateColumns: {
+  //  laptop: '1fr 1fr 1fr',
+  //  tablet: '1fr 1fr 1fr',
+  //  mobile: '1fr'
+  //},
   my: 4,
 }
 
@@ -20,6 +23,10 @@ const contentBox = {
   '& h2': {
     color: 'primary.main',
     mb: 1,
+  },
+  width: {
+    tablet: '350px',
+    mobile: '100%'
   },
 }
 
@@ -79,30 +86,6 @@ export default function Contact() {
                   <li>
                     <p>
                       <a href="mailto:jerrysavolainen@neliorakenne.fi">jerrysavolainen (at) neliorakenne.fi</a>
-                    </p>
-                  </li>
-                </ul>
-              </Box>
-            </Box>
-            <Box sx={contentBox}>
-              <Box sx={imageWrap}><Image  src={oliver} alt='Oliver' layout='responsive' placeholder='blur'/></Box>
-              <Box sx={textBox}>
-                <ul>
-                  <li>
-                    <p>
-                      <Box component="span" sx={{ fontWeight: '500' }}>
-                          Oliver Savolainen
-                      </Box>
-                    </p> 
-                  </li>
-                  <li>
-                    <p>
-                      +358 45 132 8858
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      <a href="mailto:oliversavolainen@neliorakenne.fi">oliversavolainen (at) neliorakenne.fi</a>
                     </p>
                   </li>
                 </ul>
